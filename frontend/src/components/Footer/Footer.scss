@@ -21,6 +21,9 @@ ul {
     font-weight: normal;
 }
 
+.footerLink:hover {
+    color: $color-secondary;
+}
 .droitReserved {
     text-align: center;
     background-color: $color-secondary;

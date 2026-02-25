@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+h1 {
+    text-align: center;
+    color: $color-secondary;
+    font-size: $font-size-xl;
+    padding-top: 10px;
+}
+
+.questionBox {
+    border: 1px solid;
+    border-color: $color-secondary;
+    width: 20%;
+    border-radius: 5px;
+}

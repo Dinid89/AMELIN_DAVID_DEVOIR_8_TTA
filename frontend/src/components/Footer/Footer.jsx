@@ -9,9 +9,7 @@ function Footer() {
 
           {/* Logo */}
           <div className="col-md-3 mb-4">
-            <Link to="/">
-              <img src="/Logo.png" alt="Artisans Auvergne-Rhône-Alpes" className="img-fluid" style={{ maxHeight: "150px" }} />
-            </Link>
+              <img src="/Logo.png" alt="Artisans Auvergne-Rhône-Alpes" className="img-fluid" style={{ maxHeight: "150px" }} />  
           </div>
 
           {/* Pages */}
