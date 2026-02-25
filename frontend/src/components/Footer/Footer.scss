@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+
+footer {
+    background: $color-primary;
+    width: 100%;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.footerLink {
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+    font-weight: normal;
+}
+
+.droitReserved {
+    text-align: center;
+    background-color: $color-secondary;
+    color: white;
+    padding: 10px;
+}

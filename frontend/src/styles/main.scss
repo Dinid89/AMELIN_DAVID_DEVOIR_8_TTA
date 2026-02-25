@@ -1,0 +1,20 @@
+//css commun 
+
+@use 'variables' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-black;
+    background-color: $color-primary;
+}
+
+a {
+    color: $color-secondary;
+    text-decoration: none;
+}

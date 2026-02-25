@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+    width: 100%;
+    background-color: $color-primary !important;
+    height: auto;
+}
+
+.nav-link {
+    color: $color-black !important;
+
+    &:hover {
+        color: $color-secondary !important;
+    }
+}
+
+.Logo {
+    width: auto;
+}
+
+.navbar-brand {
+    width: auto;
+}
+
+.rightMenu {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230074c7' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}

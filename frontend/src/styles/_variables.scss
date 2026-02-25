@@ -1,0 +1,71 @@
+//insertion des polices d'écriture Graphik
+
+@font-face {
+    font-family: "Graphik";
+    src: url("../assets/fonts/Graphik-Regular-Trial.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url("../assets/fonts/Graphik-Medium-Trial.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url("../assets/fonts/Graphik-Bold-Trial.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+// police
+$font-primary: "Graphik", sans-serif;
+
+// couleurs utiles
+$color-primary:#f1f8fc;
+$color-secondary:#0074c7;
+$color-blue: #00497c;
+$color-grey:#384050;
+$color-red: #cd2c2e;
+$color-green: #82b864;
+$color-black: black;
+$color-white: white;
+$color-star: #FFC107;
+
+
+
+//typo utiles
+$font-size-base:  16px;
+$font-size-sm:    14px;
+$font-size-lg:    18px;
+$font-size-xl:    24px;
+$font-size-xxl:   32px;
+
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+
+//espacements
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 48px;
+
+//breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//border radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
