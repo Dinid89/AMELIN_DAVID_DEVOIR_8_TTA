@@ -1,9 +1,17 @@
 @use '../../styles/variables' as *;
 h1 {
     color: $color-blue !important;
+    padding-bottom: 10px;
 }
 
-
+.welcome {
+    padding: 50px;
+    padding-left: 100px;
+    width: 100%;
+}
+.aside img {
+    width: 80%;
+}
 h2 {
     text-align: center;
     color: $color-blue !important;

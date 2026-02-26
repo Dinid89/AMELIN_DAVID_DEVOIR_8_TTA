@@ -4,12 +4,17 @@ function Home() {
   return (
     <>
     
-    <section className="welcome row text-justify">
+    <section className="welcome row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 me-auto">
+    <div className="welcomeText"> 
     <h1>Bienvenue sur notre plateforme</h1>
     <p><strong>Trouve Ton Artisan</strong> est la vitrine digitale des savoir-faire d’Auvergne-Rhône-Alpes.</p>
       <p>Ce site rassemble en un seul endroit tous les artisans de la région, soigneusement classés par catégories de métier : bâtiment, services, fabrication et alimentation.</p>
-      <p>En quelques clics, particuliers et professionnels peuvent découvrir des talents locaux, comparer les spécialités et trouver le bon expert près de chez eux.</p>
+      <p>En quelques clics, particuliers et professionnels peuvent découvrir des talents locaux, comparer les spécialités et trouver le bon expert près de chez vous.</p>
       <p>Simple, clair et pensé pour valoriser le travail artisanal, <strong>Trouve Ton Artisan</strong> crée un pont direct entre les besoins du quotidien et les mains expertes qui font vivre notre territoire.</p>
+    </div>
+    <div className="aside">
+      <img src="/illustrationHome.png" alt="illustration artisanat" />
+    </div>    
     </section>
 
     <section className="findArtisan">
