@@ -1,15 +1,21 @@
 @use '../../styles/variables' as *;
-
 h1 {
+    color: $color-blue !important;
+}
+
+
+h2 {
     text-align: center;
-    color: $color-secondary;
-    font-size: $font-size-xl;
+    color: $color-blue !important;
+    font-size: $font-size-xl !important;
     padding-top: 10px;
 }
 
-.questionBox {
-    border: 1px solid;
-    border-color: $color-secondary;
-    width: 20%;
-    border-radius: 5px;
+.card-group {
+    padding: 20px;
+}
+
+.card-header {
+    background-color: $color-primary !important;
+    color: $color-blue !important;
 }
