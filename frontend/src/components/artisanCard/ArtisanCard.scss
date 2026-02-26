@@ -24,3 +24,13 @@
 .col h6 {
   color: $color-blue;
 }
+
+.btn-custom {
+    background-color: $color-secondary !important;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-blue !important;
+        color: $color-white;
+    }
+}

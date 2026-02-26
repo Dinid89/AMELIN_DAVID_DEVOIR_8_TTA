@@ -42,7 +42,7 @@ function ArtisanCard({ artisan }) {
       </ul>
       
       <div className="card-body">
-        <Link to={`/artisan/${artisan.id}`} className="btn btn-primary w-30">
+        <Link to={`/artisan/${artisan.id}`} className="btn btn-custom btn-primary w-30">
           En savoir plus
         </Link>
       

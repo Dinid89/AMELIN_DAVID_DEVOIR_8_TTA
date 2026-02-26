@@ -64,7 +64,7 @@ import artisans from '../../mocks/artisans'
       </section>
 
       <section className="topArtisan px-4">
-        <h2>Le top du mois</h2> <br />
+        <h2>Notre sélection du mois</h2> <br />
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {artisans.map((artisan) => (
           <div className="col" key={artisan.id}>
