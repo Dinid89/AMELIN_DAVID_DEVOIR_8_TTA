@@ -25,7 +25,7 @@ function ArtisanList() {
 
         {/* Titre de la page */}
         <h1 className="artisan-list__titre">
-          {recherche ? `Résultats pour "${recherche}"` : categorie}
+        {recherche ? `Résultats pour "${recherche}"` : `Tous les artisans : ${categorie}`}
         </h1>
 
         {/* Résultats */}

@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.artisan-detail {
+    padding: $spacing-xl $spacing-lg;
+
+    &__photo {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: $radius-lg;
+    }
+
+    &__apropos {
+        background-color: $color-primary;
+        padding: $spacing-lg;
+        border-radius: $radius-md;
+    }
+
+    &__map {
+        border-radius: $radius-md;
+        overflow: hidden;
+    }
+
+    &__contact {
+        background-color: $color-primary;
+        padding: $spacing-lg;
+        border-radius: $radius-md;
+        margin-bottom: $spacing-xl;
+    }
+
+    h2 {
+        color: $color-secondary;
+        margin-bottom: $spacing-md;
+    }
+}
