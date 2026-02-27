@@ -19,7 +19,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <BrowserRouter>
-      {/* Header présent sur toutes les pages */}
       <Header />
 
       <main>
@@ -41,7 +40,6 @@ function App() {
         </Routes>
       </main>
 
-      {/* Footer présent sur toutes les pages */}
       <Footer />
     </BrowserRouter>
   )

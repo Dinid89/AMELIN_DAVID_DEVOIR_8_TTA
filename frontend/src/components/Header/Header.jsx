@@ -48,7 +48,7 @@ function Header() {
 
             <div className="rightMenu ms-auto">
             {/* Barre de recherche */}
-            <form className="d-flex" role="search" onSubmit={handleRecherche}>
+            <form className="searchBar d-flex" role="search" onSubmit={handleRecherche}>
               <input
                 className="form-control me-2"
                 type="search"
