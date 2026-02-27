@@ -18,18 +18,22 @@ function ArtisanDetail() {
   }
 
   return (
+    
     <div className="artisan-detail container">
 
+      <section className='section-top row row-cols-1 row-cols-md-2 g-4'>
+      <div className="col">
       {/* En-tête */}
       <div className="artisan-detail__header row mt-4">
         <div className="col-12 col-md-4 text-center">
           <img src={artisan.photo} alt={artisan.nom} className="artisan-detail__photo" />
         </div>
-        <div className="col-12 col-md-8">
+        <div className="artisanDetail col-12 col-md-8">
           <h1>{artisan.nom}</h1>
           <p><CategorieBadge categorie={artisan.categorie} /></p>
           <p><strong>Spécialité :</strong> {artisan.specialite}</p>
-          <p><strong>Ville :</strong> {artisan.ville}</p>
+          <p><strong>Adresse :</strong> {artisan.adresse.rue}</p>
+          <p><strong>Ville :</strong> {artisan.adresse.ville}</p>
           <p><strong>Note :</strong> ⭐ {artisan.note}/5</p>
           <p><strong>E-mail :</strong> {artisan.email}</p>
           {artisan.siteWeb && (
@@ -46,6 +50,9 @@ function ArtisanDetail() {
         <p>{artisan.apropos || "Aucune description disponible."}</p>
       </div>
 
+      </div>
+
+      <div className='localisation col'>
       {/* Google Maps */}
       <div className="artisan-detail__map mt-4">
         <h2>Localisation</h2>
@@ -56,13 +63,14 @@ function ArtisanDetail() {
         style={{border: 0}}
         loading="lazy"
         allowFullScreen
-        src={`https://maps.google.com/maps?q=${encodeURIComponent(artisan.ville)}&output=embed`}
-        />
+        src={`https://maps.google.com/maps?q=${encodeURIComponent(artisan.adresse.rue + ' ' + artisan.adresse.ville)}&output=embed`}        />
       </div>
+      </div>
+      </section>
 
       {/* Formulaire de contact */}
       <div className="artisan-detail__contact mt-4">
-        <h2>Contacter {artisan.nom}</h2>
+        <h2>Contacter : {artisan.nom}</h2>
         <form>
           <div className="mb-3">
             <label htmlFor="nom" className="form-label">Votre nom</label>
@@ -80,7 +88,9 @@ function ArtisanDetail() {
             <label htmlFor="message" className="form-label">Message</label>
             <textarea className="form-control" id="message" rows="4" placeholder="Votre message" required></textarea>
           </div>
-          <button type="submit" className="btn btn-custom">Envoyer</button>
+          <div className='d-flex justify-content-center'>
+          <button type="submit" className="btn btn-primary">Envoyer</button>
+          </div>
         </form>
       </div>
 

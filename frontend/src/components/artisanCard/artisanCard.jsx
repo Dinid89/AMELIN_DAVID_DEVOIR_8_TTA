@@ -36,7 +36,7 @@ function ArtisanCard({ artisan }) {
             <h6 className="mb-0 me-auto">Localisation :</h6>
               <div className="d-flex justify-content-center gap-2">
                 <img src="/icons/placeholder.png" alt="Icone plan" height="20"/>
-                {artisan.ville}
+                {artisan.adresse.ville}
               </div>
           </div>
         </li>
