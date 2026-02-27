@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import "./ArtisanCard.scss"    
+import CategorieBadge from "../CategorieBadge/CategorieBadge"
+import "./ArtisanCard.scss"
 
 function ArtisanCard({ artisan }) {
   return (
@@ -10,7 +11,7 @@ function ArtisanCard({ artisan }) {
           <div className="row">
             <div className="col">
             <h6>Catégorie:</h6>  
-            <span className="list-group-item">{artisan.categorie}</span>
+            <CategorieBadge categorie={artisan.categorie} />
             </div>
             <div className="col">
             <h6>Spécialité:</h6>

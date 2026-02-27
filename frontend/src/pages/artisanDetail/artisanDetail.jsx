@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import artisans from '../../mocks/artisans'
+import CategorieBadge from '../../components/CategorieBadge/CategorieBadge'
 import './ArtisanDetail.scss'
 
 function ArtisanDetail() {
@@ -26,7 +27,7 @@ function ArtisanDetail() {
         </div>
         <div className="col-12 col-md-8">
           <h1>{artisan.nom}</h1>
-          <p><span className="badge bg-primary">{artisan.categorie}</span></p>
+          <p><CategorieBadge categorie={artisan.categorie} /></p>
           <p><strong>Spécialité :</strong> {artisan.specialite}</p>
           <p><strong>Ville :</strong> {artisan.ville}</p>
           <p><strong>Note :</strong> ⭐ {artisan.note}/5</p>
