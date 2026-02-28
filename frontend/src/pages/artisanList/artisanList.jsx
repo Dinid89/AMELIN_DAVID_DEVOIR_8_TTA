@@ -1,6 +1,7 @@
 import { useParams, useSearchParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { getArtisansByCategorie, searchArtisans } from '../../services/api'
 import ArtisanCard from '../../components/ArtisanCard/ArtisanCard'
-import artisans from '../../mocks/artisans'
 import './ArtisanList.scss'
 
 function ArtisanList() {
@@ -8,16 +9,33 @@ function ArtisanList() {
   const [searchParams] = useSearchParams()
   const recherche = searchParams.get('q')
 
-  // Filtrer par catégorie ou par recherche
-  const artisansFiltres = artisans.filter((artisan) => {
+  const [artisans, setArtisans] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
     if (recherche) {
-      return artisan.nom.toLowerCase().includes(recherche.toLowerCase())
+      searchArtisans(recherche)
+        .then((response) => {
+          setArtisans(response.data)
+          setLoading(false)
+        })
+        .catch(() => {
+          setError('Erreur lors de la recherche')
+          setLoading(false)
+        })
+    } else if (categorie) {
+      getArtisansByCategorie(categorie)
+        .then((response) => {
+          setArtisans(response.data)
+          setLoading(false)
+        })
+        .catch(() => {
+          setError('Erreur lors du chargement')
+          setLoading(false)
+        })
     }
-    if (categorie) {
-      return artisan.categorie.toLowerCase() === categorie.toLowerCase()
-    }
-    return true
-  })
+  }, [categorie, recherche])
 
   return (
     <div className="artisan-list">
@@ -25,16 +43,19 @@ function ArtisanList() {
 
         {/* Titre de la page */}
         <h1 className="artisan-list__titre">
-        {recherche ? `Résultats pour "${recherche}"` : `Tous les artisans : ${categorie}`}
+          {recherche ? `Résultats pour "${recherche}"` : `Tous les artisans : ${categorie}`}
         </h1>
 
+        {loading && <p>Chargement...</p>}
+        {error && <p className="text-danger">{error}</p>}
+
         {/* Résultats */}
-        {artisansFiltres.length === 0 ? (
+        {!loading && artisans.length === 0 ? (
           <p className="artisan-list__vide">Aucun artisan trouvé.</p>
         ) : (
           <div className="artisanList row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            {artisansFiltres.map((artisan) => (
-              <div className="col" key={artisan.id}>
+            {artisans.map((artisan) => (
+              <div className="col" key={artisan.id_artisan}>
                 <ArtisanCard artisan={artisan} />
               </div>
             ))}

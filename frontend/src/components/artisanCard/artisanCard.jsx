@@ -6,19 +6,19 @@ function ArtisanCard({ artisan }) {
   return (
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">{artisan.nom}</h5>
+        <h5 className="card-title">{artisan.nom_artisan}</h5>
         <hr />
           <div className="row">
             <div className="col">
             <h6>Catégorie:</h6>  
-            <CategorieBadge categorie={artisan.categorie} />
+            <CategorieBadge categorie={artisan.Specialite?.Categorie?.nom_categorie} />
             </div>
             <div className="col">
             <h6>Spécialité:</h6>
-            <span className="list-group-item">{artisan.specialite}</span>
+            <span className="list-group-item">{artisan.Specialite?.nom_specialite}</span>
             </div>
           </div> <br />
-        <img src={artisan.photo} className="card-img-top" alt={artisan.nom} />
+        <img src={artisan.photo_artisan || "/artisans/aupainchaud.jpg"} className="card-img-top" alt={artisan.nom_artisan} />
       </div>
       
       <ul className="list-group list-group-flush">
@@ -27,7 +27,7 @@ function ArtisanCard({ artisan }) {
             <h6 className="mb-0 me-auto">Note :</h6>
             <div className="d-flex align-items-center gap-2">
               <img src="/icons/star.png" alt="Icone étoile" height="20"/>
-              {artisan.note}/5
+              {artisan.note_artisan}/5
             </div>
           </div>
         </li>
@@ -36,17 +36,16 @@ function ArtisanCard({ artisan }) {
             <h6 className="mb-0 me-auto">Localisation :</h6>
               <div className="d-flex justify-content-center gap-2">
                 <img src="/icons/placeholder.png" alt="Icone plan" height="20"/>
-                {artisan.adresse.ville}
+                {artisan.ville_artisan}
               </div>
           </div>
         </li>
       </ul>
       
       <div className="card-body">
-        <Link to={`/artisan/${artisan.id}`} className="btn btn-custom btn-primary w-30">
+        <Link to={`/artisan/${artisan.id_artisan}`} className="btn btn-custom w-30">
           En savoir plus
         </Link>
-      
       </div>
     </div>
   )

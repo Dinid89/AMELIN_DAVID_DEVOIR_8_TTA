@@ -38,12 +38,18 @@ const getArtisanById = async (req, res) => {
 // Récupérer les artisans par catégorie
 const getArtisansByCategorie = async (req, res) => {
     try {
+        const { Op } = require('sequelize')
         const artisans = await Artisan.findAll({
             include: [{
                 model: Specialite,
+                required: true,
                 include: [{
                     model: Categorie,
-                    where: { nom_categorie: req.params.categorie }
+                    where: { 
+                        nom_categorie: {
+                            [Op.like]: req.params.categorie
+                        }
+                    }
                 }]
             }]
         })
@@ -78,8 +84,7 @@ const searchArtisans = async (req, res) => {
 const getTopArtisans = async (req, res) => {
     try {
         const artisans = await Artisan.findAll({
-            order: [['note_artisan', 'DESC']],
-            limit: 3,
+            where: { top_artisan: 1 },
             include: [{
                 model: Specialite,
                 include: [{ model: Categorie }]

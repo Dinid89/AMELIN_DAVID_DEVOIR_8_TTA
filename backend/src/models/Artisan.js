@@ -47,6 +47,11 @@ const Artisan = sequelize.define('Artisan', {
     photo_artisan: {
         type: DataTypes.STRING(300),
         allowNull: false
+    },
+    top_artisan: {
+        type: DataTypes.TINYINT,
+        allowNull: false,
+        defaultValue: 0
     }
 }, {
     tableName: 'artisan',
