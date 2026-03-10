@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getTopArtisans } from '../../services/api'
+import { Helmet } from 'react-helmet-async'
 import ArtisanCard from '../../components/ArtisanCard/ArtisanCard'
 import "./Home.scss"
 
@@ -22,6 +23,11 @@ function Home() {
 
   return (
     <>
+
+    <Helmet>
+      <title>Accueil - Trouve ton artisan</title>
+      <meta name="description" content="Découvrez les artisans de votre région et contactez-les facilement." />
+    </Helmet>
     
     <section className="welcome row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 me-auto">
     <div className="text-justify welcomeText"> 

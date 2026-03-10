@@ -26,7 +26,7 @@
     display: flex;
     gap: 15px;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
 }
 
 .navbar-toggler {
@@ -39,5 +39,12 @@
 }
 
 .searchBar {
-    width: 90%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .rightMenu {
+        width: 100%;
+        gap: 10px;
+    }
 }

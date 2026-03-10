@@ -17,10 +17,10 @@ function Footer() {
             <h5>Pages</h5>
             <ul className="list-unstyled">
               <li><Link className="footerLink" to="/">Accueil</Link></li>
-              <li><Link className="footerLink" to="/batiment">Bâtiment</Link></li>
-              <li><Link className="footerLink" to="/services">Services</Link></li>
-              <li><Link className="footerLink" to="/fabrication">Fabrication</Link></li>
-              <li><Link className="footerLink" to="/alimentaire">Alimentaire</Link></li>
+              <li><Link className="footerLink" to="/categorie/batiment">Bâtiment</Link></li>
+              <li><Link className="footerLink" to="/categorie/services">Services</Link></li>
+              <li><Link className="footerLink" to="/categorie/fabrication">Fabrication</Link></li>
+              <li><Link className="footerLink" to="/categorie/alimentation">Alimentation</Link></li>
             </ul>
           </div>
 
@@ -28,7 +28,7 @@ function Footer() {
           <div className="col-md-3 mb-4">
             <h5>Conditions</h5>
             <ul className="list-unstyled">
-              <li><Link className="footerLink" to="/mentions-legales">Mentions légales</Link></li>
+              <li><Link className="footerLink" to="/pages/MentionLegale">Mentions légales</Link></li>
               <li><Link className="footerLink" to="/rgpd">RGPD</Link></li>
               <li><Link className="footerLink" to="/accessibilite">Accessibilité</Link></li>
               <li><Link className="footerLink" to="/cookies">Cookies</Link></li>

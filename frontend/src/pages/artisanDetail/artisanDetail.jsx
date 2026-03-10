@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getArtisanById } from '../../services/api'
+import { Helmet } from 'react-helmet-async'
 import CategorieBadge from '../../components/CategorieBadge/CategorieBadge'
 import './ArtisanDetail.scss'
 
@@ -31,6 +32,14 @@ function ArtisanDetail() {
   )
 
   return (
+    <>
+
+    <Helmet>
+      <title>Votre artisan</title>
+      <meta name="description" content="Voici les coordonnées de votre artisan" />
+    </Helmet>
+    
+    
     <div className="artisan-detail container">
 
       <section className='section-top row row-cols-1 row-cols-md-2 g-4'>
@@ -103,6 +112,8 @@ function ArtisanDetail() {
       </div>
 
     </div>
+
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import { useParams, useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getArtisansByCategorie, searchArtisans } from '../../services/api'
+import { Helmet } from 'react-helmet-async'
 import ArtisanCard from '../../components/ArtisanCard/ArtisanCard'
 import './ArtisanList.scss'
 
@@ -38,6 +39,11 @@ function ArtisanList() {
   }, [categorie, recherche])
 
   return (
+    <>
+    <Helmet>
+      <title>Liste des artisans</title>
+      <meta name="description" content="Découvrez les artisans de votre région et contactez-les facilement." />
+    </Helmet>
     <div className="artisan-list">
       <div className="container">
 
@@ -64,6 +70,7 @@ function ArtisanList() {
 
       </div>
     </div>
+    </>
   )
 }
 
