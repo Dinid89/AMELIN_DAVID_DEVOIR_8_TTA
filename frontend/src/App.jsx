@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Importation des pages
 import Home from './pages/Home/Home'
-import ArtisanList from './pages/ArtisanList/ArtisanList'
+import ArtisanList from './pages/ArtisanList/ArtisanList.jsx'
 import ArtisanDetail from './pages/ArtisanDetail/ArtisanDetail'
 import Legal from './pages/MentionLegale/MentionLegale'
 import NotFound from './pages/NotFound/NotFound'
