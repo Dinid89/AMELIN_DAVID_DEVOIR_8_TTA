@@ -32,7 +32,7 @@ function App() {
           <Route path="/categorie/:categorie" element={<ArtisanList />} />
 
           {/* Fiche détaillée d'un artisan */}
-          <Route path="/artisan/:id" element={<ArtisanDetail />} />/>
+          <Route path="/artisan/:id" element={<ArtisanDetail />} />
 
           {/* Page 404 - toute route non reconnue */}
           <Route path="*" element={<NotFound />} />
