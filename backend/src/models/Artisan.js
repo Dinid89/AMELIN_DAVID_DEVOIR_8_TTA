@@ -38,11 +38,11 @@ const Artisan = sequelize.define('Artisan', {
     },
     email_artisan: {
         type: DataTypes.STRING(50),
-        allowNull: false
+        allowNull: true
     },
     site_artisan: {
         type: DataTypes.STRING(50),
-        allowNull: false
+        allowNull: true
     },
     photo_artisan: {
         type: DataTypes.STRING(300),
