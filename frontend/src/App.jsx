@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // Importation des pages
 import Home from './pages/Home/Home'
 import ArtisanList from './pages/ArtisanList/ArtisanList.jsx'
-import ArtisanDetail from './pages/ArtisanDetail/ArtisanDetail'
-import Legal from './pages/MentionLegale/MentionLegale'
-import NotFound from './pages/NotFound/NotFound'
+import ArtisanDetail from './pages/ArtisanDetail/ArtisanDetail.jsx'
+import Legal from './pages/MentionLegale/MentionLegale.jsx'
+import NotFound from './pages/NotFound/NotFound.jsx'
 
 // Importation des composants
 import Header from './components/Header/Header'
