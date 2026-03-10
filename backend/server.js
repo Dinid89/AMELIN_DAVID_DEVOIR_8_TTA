@@ -16,7 +16,7 @@ app.use(helmet())
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 100,
-    message: { message: 'Trop de requêtes, veuillez réessayer plus tard.' }
+    message: { message: 'veuillez réessayer plus tard.' }
 })
 app.use(limiter)
 
