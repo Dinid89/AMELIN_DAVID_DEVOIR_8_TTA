@@ -64,15 +64,21 @@ const searchArtisans = async (req, res) => {
     try {
         const { Op } = require('sequelize')
         const artisans = await Artisan.findAll({
-            where: {
-                nom_artisan: {
-                    [Op.like]: `%${req.query.q}%`
-                }
-            },
             include: [{
                 model: Specialite,
-                include: [{ model: Categorie }]
-            }]
+                required: true,
+                include: [{ 
+                    model: Categorie,
+                    required: true
+                }]
+            }],
+            where: {
+                [Op.or]: [
+                    { nom_artisan: { [Op.like]: `%${req.query.q}%` } },
+                    { ville_artisan: { [Op.like]: `%${req.query.q}%` } },
+                    { '$Specialite.nom_specialite$': { [Op.like]: `%${req.query.q}%` } }
+                ]
+            }
         })
         res.json(artisans)
     } catch (error) {

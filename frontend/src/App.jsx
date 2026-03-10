@@ -26,6 +26,9 @@ function App() {
           {/* Page d'accueil */}
           <Route path="/" element={<Home />} />
 
+          {/* Recherche */}
+          <Route path="/recherche" element={<ArtisanList />} />
+
           {/* Liste des artisans par catégorie */}
           <Route path="/categorie/:categorie" element={<ArtisanList />} />
 
