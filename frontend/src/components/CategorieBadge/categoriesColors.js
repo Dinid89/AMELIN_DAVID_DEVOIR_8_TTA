@@ -5,4 +5,6 @@ const categoriesColors = {
     "Services" : "#0074c7"    
 }
 
+//couleurs selon la charte graphique du projet, associées à chaque catégorie d'artisan
+
 export default categoriesColors;

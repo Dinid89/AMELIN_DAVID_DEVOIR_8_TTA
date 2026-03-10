@@ -29,6 +29,8 @@ function Home() {
       <meta name="description" content="Découvrez les artisans de votre région et contactez-les facilement." />
     </Helmet>
     
+    {/* Présentation de l'application */}
+
     <section className="welcome row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 me-auto">
     <div className="text-justify welcomeText"> 
     <h1>Bienvenue sur notre plateforme</h1>
@@ -41,6 +43,8 @@ function Home() {
       <img src="/illustrationHome.png" alt="illustration artisanat" />
     </div>    
     </section>
+
+    {/* Questions */}
 
     <section className="findArtisan">
     <h2>Comment trouver mon artisan ?</h2>
@@ -85,6 +89,8 @@ function Home() {
 
     </div> 
     </section>
+
+    {/* top 3 des artisans du mois */}
 
     <section className="topArtisan px-4">
       <h2>Notre sélection du mois</h2> <br />

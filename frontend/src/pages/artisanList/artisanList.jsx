@@ -44,6 +44,7 @@ function ArtisanList() {
       <title>{`Liste des artisans - ${categorie}`}</title>
       <meta name="description" content={`Voici la liste des artisans concernant la catégorie ${categorie}`} />
     </Helmet>
+    
     <div className="artisan-list">
       <div className="container">
 

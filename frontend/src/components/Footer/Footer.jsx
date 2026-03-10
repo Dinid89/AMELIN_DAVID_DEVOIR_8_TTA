@@ -11,7 +11,7 @@ function Footer() {
           <div className="col-md-3 mb-4">
               <img src="/Logo.png" alt="Artisans Auvergne-Rhône-Alpes" className="img-fluid" style={{ maxHeight: "150px" }} />  
           </div>
-
+          
           {/* Pages */}
           <div className="col-md-3 mb-4">
             <h5>Pages</h5>

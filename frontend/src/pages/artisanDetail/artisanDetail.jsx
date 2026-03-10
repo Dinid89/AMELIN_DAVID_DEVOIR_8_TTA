@@ -34,6 +34,9 @@ function ArtisanDetail() {
   return (
     <>
 
+    {/* Detail de la fiche artisan */}
+
+    
     <Helmet>
       <title>Votre artisan</title>
       <meta name="description" content="Voici les coordonnées de votre artisan" />
@@ -70,6 +73,8 @@ function ArtisanDetail() {
           </div>
         </div>
 
+        {/* google map */}
+
         <div className='localisation col'>
           <div className="artisan-detail__map mt-4">
             <h2>Localisation</h2>
@@ -85,6 +90,8 @@ function ArtisanDetail() {
           </div>
         </div>
       </section>
+
+      {/* formulaire de contact */}
 
       <div className="artisan-detail__contact mt-4">
         <h2>Contacter : {artisan.nom_artisan}</h2>

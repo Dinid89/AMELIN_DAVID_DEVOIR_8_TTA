@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import CategorieBadge from "../CategorieBadge/CategorieBadge"
 import "./ArtisanCard.scss"
 
+//Composant pour afficher les informations d'un artisan dans une carte
+
 function ArtisanCard({ artisan }) {
   return (
     <div className="card text-center">

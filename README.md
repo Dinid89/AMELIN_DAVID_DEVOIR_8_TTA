@@ -24,6 +24,7 @@ obligatoire : Catégorie / Spécialité
 
 ## A venir :
 une application API directement pour rajouter / effacer / modifier un artisan
+possibilité de trier les artisans par spécialité
 
 
 
