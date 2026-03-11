@@ -9,6 +9,11 @@ Frontend : React + Vite + Bootstrap +
 Backend : NodeJS + Express + Sequelize
 BDD : MySQL 
 
+## Deploiement
+
+Frontend : Vercel
+Backend : Railway
+
 ## Sécurité
 
 Helmet + Rate Limiting + CORS + Utilisateur SQL + Sequelize

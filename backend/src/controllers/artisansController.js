@@ -59,7 +59,7 @@ const getArtisansByCategorie = async (req, res) => {
     }
 }
 
-// Rechercher des artisans par nom
+// Rechercher des artisans par nom et spécialité
 const searchArtisans = async (req, res) => {
     try {
         const { Op } = require('sequelize')

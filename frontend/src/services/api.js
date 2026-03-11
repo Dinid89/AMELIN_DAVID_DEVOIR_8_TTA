@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// URL de base de l'API
+// URL de base de l'API sur Railway
 const API = axios.create({
     baseURL: 'https://chic-analysis-production.up.railway.app/api'
 })
