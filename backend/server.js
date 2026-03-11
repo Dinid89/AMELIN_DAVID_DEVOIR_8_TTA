@@ -25,7 +25,11 @@ app.use(limiter)
 
 // CORS - autorise uniquement le frontend
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174']
+    origin: [
+        'http://localhost:5173', 
+        'http://localhost:5174',
+        process.env.CORS_ORIGIN
+    ]
 }))
 
 app.use(express.json())
