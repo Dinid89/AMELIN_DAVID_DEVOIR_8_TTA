@@ -9,6 +9,9 @@ const categoriesRoutes = require('./src/routes/categories')
 
 const app = express()
 
+// Faire confiance au proxy Railway
+app.set('trust proxy', 1)
+
 // Sécurité des headers HTTP
 app.use(helmet())
 
