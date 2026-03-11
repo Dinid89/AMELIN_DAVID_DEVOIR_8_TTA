@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // URL de base de l'API
 const API = axios.create({
-    baseURL: 'http://localhost:3000/api'
+    baseURL: 'https://chic-analysis-production.up.railway.app/api'
 })
 
 // Récupérer tous les artisans
